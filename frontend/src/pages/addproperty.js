@@ -56,7 +56,21 @@ const AddPropertyPage = () => {
         "http://localhost:5000/api/addproperty",
         formData
       );
-      if (response.status === 201) alert("Property added successfully!");
+      if (response.status === 201) {
+        alert("Property added successfully!");
+        setFormData({
+          sellerId: userId,
+          title: "",
+          description: "",
+          place: "",
+          area: "",
+          bedrooms: "",
+          bathrooms: "",
+          cost: "",
+          sqft: "",
+          nearbyFacilities: [],
+        });
+      }
     } catch (error) {
       console.error("Error adding property:", error);
       alert("Failed to add property. Please try again.");

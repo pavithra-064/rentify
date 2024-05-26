@@ -20,7 +20,7 @@ const PropertyDetails = () => {
             },
           }
         );
-        console.log(response.data);
+
         setPropertyDetails(response.data.property[0]);
         setSellerDetails(response.data.seller[0]);
       } catch (error) {

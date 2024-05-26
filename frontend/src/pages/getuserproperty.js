@@ -52,6 +52,8 @@ const App = () => {
       area: property.area,
       bedrooms: property.bedrooms,
       bathrooms: property.bathrooms,
+      cost: property.cost,
+      sqft: property.sqft,
       nearbyFacilities: property.nearbyFacilities.join(", "),
     });
   };
@@ -219,6 +221,40 @@ const App = () => {
                     value={formData.bathrooms}
                     onChange={handleChange}
                     className="w-full p-2 border border-gray-300 rounded"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    className="block text-sm font-bold mb-2"
+                    htmlFor="cost"
+                  >
+                    Cost
+                  </label>
+                  <input
+                    type="number"
+                    name="cost"
+                    id="cost"
+                    value={formData.cost}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    className="block text-sm font-bold mb-2"
+                    htmlFor="sqft"
+                  >
+                    sqft
+                  </label>
+                  <input
+                    type="number"
+                    name="sqft"
+                    id="sqft"
+                    value={formData.sqft}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                   />
                 </div>
                 <div className="mb-4">

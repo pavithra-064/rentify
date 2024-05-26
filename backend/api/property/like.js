@@ -5,7 +5,7 @@ const Property = require("../../models/propertySchema");
 router.post("/:propertyId", async (req, res) => {
   try {
     const userId = req.user.userId; 
-    console.log(userId);
+    // console.log(userId);
     const propertyId = req.params.propertyId;
 
     

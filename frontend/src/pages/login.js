@@ -46,7 +46,7 @@ const Login = () => {
         });
 
         if (res.status === 200) {
-          console.log(res.data);
+          // console.log(res.data);
           const { token } = res.data;
           const firstName = res.data.user.firstName;
           const userid = res.data.user.userId;
@@ -54,7 +54,6 @@ const Login = () => {
           const role = res.data.user.role;
           const email = res.data.user.email;
 
-          console.log(token, role, userid, email);
           const userName = `${firstName} ${lastName}`;
           localStorage.setItem("token", token);
           localStorage.setItem("userName", userName);

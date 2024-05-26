@@ -13,6 +13,8 @@ const addproperty = async (req, res) => {
       bedrooms,
       bathrooms,
       nearbyFacilities,
+      cost,
+      sqft,
     } = req.body;
 
     const newProperty = new Property({
@@ -24,6 +26,8 @@ const addproperty = async (req, res) => {
       bedrooms,
       bathrooms,
       nearbyFacilities,
+      cost,
+      sqft,
     });
 
     await newProperty.save();

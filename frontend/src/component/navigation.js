@@ -21,6 +21,7 @@ export default function Navigation() {
     localStorage.removeItem("userName");
     localStorage.removeItem("role");
     localStorage.removeItem("userid");
+    localStorage.removeItem("email");
     navigate("/login");
   }
   return (

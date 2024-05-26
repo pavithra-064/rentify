@@ -8,7 +8,7 @@ router.post("/:propertyId", async (req, res) => {
   try {
     const propertyId = req.params.propertyId;
 
-    console.log("req", req.userId);
+    // console.log("req", req.userId);
     const property = await Property.findOne({ id: propertyId });
 
     if (!property) {
@@ -23,7 +23,7 @@ router.post("/:propertyId", async (req, res) => {
     }
 
     const sellerEmail = seller[0].email;
-    console.log(seller);
+    // console.log(seller);
     const buyerEmailContent = `Thank you for showing interest in the property \n ${property.title}. Seller's details: Name: ${seller[0].firstName}\n Email:${seller[0].email}\n Phone: ${seller[0].phoneNumber}`;
     const sellerEmailContent = `A buyer has shown interest in your property. Buyer's details: Name:${buyer[0].firstName}\n Email: ${buyerEmail}\n Phone: ${buyer[0].phoneNumber}`;
 

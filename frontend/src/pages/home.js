@@ -44,9 +44,9 @@ const Home = () => {
           },
         }
       );
-      console.log(response);
+      // console.log(response);
       const updatedLikes = response.data.likes;
-      console.log(updatedLikes);
+      // console.log(updatedLikes);
       // Update the properties state with the new likes count
       setProperties((prevProperties) =>
         prevProperties.map((property) =>
@@ -61,7 +61,7 @@ const Home = () => {
       }));
       fetchProperties();
     } catch (err) {
-      console.log(err.response);
+      // console.log(err.response);
       if (err.response.status === 400) {
         setLikeMessages((prevMessages) => ({
           ...prevMessages,
