@@ -25,6 +25,7 @@ mongoose
   .connect(uri, {})
   .then(() => {
     app.listen(port, "0.0.0.0");
+    console.log("connected to DB");
     console.log(`Listening at ${port}`);
   })
   .catch((err) => console.log("Error: ", err));
