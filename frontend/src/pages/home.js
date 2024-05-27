@@ -16,7 +16,7 @@ const Home = () => {
   const fetchProperties = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/getallproperty"
+        "https://rentify-backend.up.railway.app/api/getallproperty"
       );
       setProperties(response.data);
     } catch (error) {
@@ -36,7 +36,7 @@ const Home = () => {
     }
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/like/${propertyId}`,
+        `https://rentify-backend.up.railway.app/api/like/${propertyId}`,
         null,
         {
           headers: {

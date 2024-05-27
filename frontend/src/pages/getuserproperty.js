@@ -23,7 +23,7 @@ const App = () => {
   const fetchProperties = async (userid) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/getmyproperty/${userid}`
+        `https://rentify-backend.up.railway.app/api/getmyproperty/${userid}`
       );
       setProperties(response.data);
     } catch (error) {
@@ -61,7 +61,7 @@ const App = () => {
   const handleDelete = async (propertyId) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/deleteproperty/${propertyId}`
+        `https://rentify-backend.up.railway.app/api/deleteproperty/${propertyId}`
       );
       setProperties(
         properties.filter((property) => property._id !== propertyId)
@@ -90,7 +90,7 @@ const App = () => {
           .map((facility) => facility.trim()),
       };
       const response = await axios.put(
-        `http://localhost:5000/api/updateproperty/${editProperty.id}`,
+        `https://rentify-backend.up.railway.app/api/updateproperty/${editProperty.id}`,
         updatedProperty
       );
       setProperties(

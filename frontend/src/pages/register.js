@@ -57,7 +57,7 @@ const Register = () => {
     if (valid) {
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/register",
+          "https://rentify-backend.up.railway.app/api/register",
           formData
         );
         if (response.status === 201) {

@@ -13,7 +13,7 @@ const PropertyDetails = () => {
       try {
         // Fetch property details
         const response = await axios.get(
-          `http://localhost:5000/api/viewproperty/${propertyId}`,
+          `https://rentify-backend.up.railway.app/api/viewproperty/${propertyId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -33,7 +33,7 @@ const PropertyDetails = () => {
 
   const handleInterest = async () => {
     const response = await axios.post(
-      `http://localhost:5000/api/interested/${propertyId}`,
+      `https://rentify-backend.up.railway.app/api/interested/${propertyId}`,
       null,
       {
         headers: {

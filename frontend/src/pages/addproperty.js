@@ -53,7 +53,7 @@ const AddPropertyPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/addproperty",
+        "https://rentify-backend.up.railway.app/api/addproperty",
         formData
       );
       if (response.status === 201) {
